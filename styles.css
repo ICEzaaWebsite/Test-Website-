@@ -1,0 +1,138 @@
+body {
+    font-family: "Sriracha", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f4f4f4; /* สีพื้นหลัง */
+    color: #333; /* สีข้อความ */
+    margin: 0;
+    padding: 20px;
+    user-select: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2E7D32; /* สีเขียวเข้มสำหรับ header */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 100%; /* ให้ nav bar ยืดเต็มความกว้าง */
+}
+
+nav ul {
+    list-style-type: none; /* ไม่แสดงสัญลักษณ์ */
+    padding: 0; /* ลบ padding */
+    margin: 0; /* ลบ margin */
+    display: flex; /* ใช้ Flexbox */
+    justify-content: space-between; /* กระจายรายการให้เต็มแถว */
+}
+
+nav ul li {
+    flex: 1; /* ทำให้แต่ละรายการใช้พื้นที่เท่ากัน */
+}
+
+nav ul li a {
+    color: white; /* สีข้อความ */
+    text-decoration: none; /* ไม่ให้มีขีดเส้นใต้ */
+    display: block; /* ทำให้ลิงก์เต็มพื้นที่ */
+    padding: 10px; /* เพิ่ม padding */
+    text-align: center; /* จัดกลางข้อความ */
+    background-color: #12e20b;
+}
+
+nav ul li a:hover {
+    background-color: #2E7D32; /* เปลี่ยนสีเมื่อเอาเมาส์ไปที่ลิงก์ */
+}
+
+#contextMenu {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* ให้แน่ใจว่าอยู่ด้านบน */
+    display: none; /* ซ่อนเมนูเริ่มต้น */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#contextMenu div {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contextMenu div:hover {
+    background-color: #f0f0f0; /* เปลี่ยนสีเมื่อเอาเมาส์ไปวาง */
+}
+
+#calculator {
+    border: 1px solid #800080; /* ขอบของเครื่องคิดเลข */
+    padding: 10px;
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+}
+
+.logo {
+    width: 100px; /* กำหนดความกว้างของโลโก้ */
+    height: auto; /* ให้สูงอัตโนมัติตามอัตราส่วน */
+    margin-right: 10px; /* เพิ่มระยะห่างระหว่างโลโก้และชื่อ */
+}
+
+#content {
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #fff; /* สีพื้นหลังของแต่ละส่วน */
+    border-radius: 5px; /* มุมโค้ง */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เงา */
+}
+
+#calendar-container {
+    display: none; /* ซ่อนปฏิทินโดยเริ่มต้น */
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    position: absolute; /* ให้อยู่บนหน้า */
+    z-index: 1000;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#close-calendar {
+    margin-bottom: 10px; /* เพิ่มระยะห่างด้านล่าง */
+    padding: 5px 10px; /* เพิ่ม padding */
+    background-color: #f44336; /* สีพื้นหลังแดง */
+    color: white; /* สีข้อความ */
+    border: none; /* ไม่มีขอบ */
+    cursor: pointer; /* แสดงเคอร์เซอร์ */
+}
+
+#close-calendar:hover {
+    background-color: #d32f2f; /* สีเมื่อเอาเมาส์ไปที่ปุ่ม */
+}

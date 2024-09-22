@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Website | by me</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <img src="button.png" alt="Logo" class="logo">
+        <h1>ยินดีต้อนรับสู่เว็บไซต์ของเรา</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">หน้าหลัก</a></li>
+            <li><a href="#store">ร้านค้า</a></li>
+            <li><a href="#statistics">สถิติการซื้อขาย</a></li>
+            <li><a href="#contact">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- เนื้อหาของหน้า -->
+<div id="content">
+    <section id="home">
+        <h2>หน้าหลัก</h2>
+        <p>ยินดีต้อนรับสู่เว็บไซต์ของเรา ที่นี่คุณสามารถค้นหาสินค้าต่างๆ และข้อมูลการซื้อขายได้อย่างง่ายดาย!</p>
+    </section>
+
+    <section id="store">
+        <h2>ร้านค้า</h2>
+        <p>ที่ร้านค้าของเรา คุณสามารถเลือกซื้อสินค้าหลากหลายประเภท ไม่ว่าจะเป็นสินค้าอิเล็กทรอนิกส์ เสื้อผ้า หรือของใช้ในบ้าน!</p>
+    </section>
+
+    <section id="statistics">
+        <h2>สถิติการซื้อขาย</h2>
+        <p>เรามีข้อมูลสถิติการซื้อขายที่น่าสนใจ รวมถึงแนวโน้มความนิยมของสินค้าในแต่ละเดือน!</p>
+    </section>
+
+    <section id="contact">
+        <h2>ติดต่อเรา</h2>
+        <p>หากคุณมีคำถามหรือข้อเสนอแนะ สามารถติดต่อเราผ่านทางอีเมล หรือโทรศัพท์ได้ที่นี่!</p>
+    </section>
+</div>
+
+<!-- เมนูคลิกขวา -->
+<div id="contextMenu" style="display:none;">
+    <div onclick="customAction('เครื่องคิดเลข')">เครื่องคิดเลข</div>
+    <div onclick="customAction('ปฏิทิน')">ปฏิทิน</div>
+    <div onclick="customAction('นาฬิกา')">นาฬิกา</div>
+</div>
+
+<!-- เครื่องคิดเลข -->
+<div id="calculator-container" style="display:none;">
+    <input type="text" id="display" disabled>
+    <div>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('+')">+</button>
+    </div>
+    <div>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')">-</button>
+    </div>
+    <div>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('*')">*</button>
+    </div>
+    <div>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="calculateResult()">=</button>
+        <button onclick="appendToDisplay('/')">/</button>
+    </div>
+    <button onclick="closeCalculator()">ปิด</button>
+</div>
+
+<!-- ปฏิทิน -->
+<div id="calendar-container" style="display:none;">
+    <div id="calendar"></div>
+</div>
+
+<!-- นาฬิกา -->
+<div id="clock-container" style="display:none;">
+    <div id="clock-display"></div>
+    <button onclick="closeClock()">ปิด</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
